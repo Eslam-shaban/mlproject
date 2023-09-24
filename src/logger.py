@@ -15,5 +15,5 @@ logging.basicConfig(filename=LOG_FILE_PATH, format="[%(asctime)s] %(lineno)d %(n
                     level= logging.INFO) 
 
 
-if __name__ == "__main__":
-    logging.info("Logging has started")
+# if __name__ == "__main__":
+#     logging.info("Logging has started")
