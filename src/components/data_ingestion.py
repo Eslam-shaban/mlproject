@@ -7,6 +7,8 @@ from dataclasses import dataclass
 import pandas as pd
 
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
+
 
 @dataclass
 class DataIngestionConfig:
@@ -54,8 +56,9 @@ if __name__ == "__main__":
 
     train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
 
-    # modeltrainer=ModelTrainer()
-    # print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
+    modeltrainer=ModelTrainer()
+    best_model_r2_score=modeltrainer.initiate_model_trainer(train_arr,test_arr)
+    print(best_model_r2_score)
     
 
 
